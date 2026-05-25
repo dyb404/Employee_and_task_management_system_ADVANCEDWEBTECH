@@ -1,0 +1,100 @@
+.employees-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.emp-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.emp-card:hover {
+  border-color: var(--border-light);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.emp-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.emp-status-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+.emp-status-dot[data-active="true"]  { background: var(--green); box-shadow: 0 0 6px var(--green); }
+.emp-status-dot[data-active="false"] { background: var(--text-muted); }
+
+.emp-name {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.emp-designation {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: -6px;
+}
+
+.emp-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.emp-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.emp-meta-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.emp-meta-value {
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 160px;
+}
+
+.emp-role-badge {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.emp-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.emp-actions .btn {
+  flex: 1;
+  justify-content: center;
+}
