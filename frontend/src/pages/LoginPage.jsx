@@ -46,9 +46,9 @@ export default function LoginPage() {
 
       <div className="auth-card fade-in">
         <div className="auth-logo">
-          <div className="auth-logo-mark">W</div>
+          <div className="auth-logo-mark">P</div>
           <div>
-            <div className="auth-logo-name">WorkFlow</div>
+            <div className="auth-logo-name">ProDesk</div>
             <div className="auth-logo-sub">Employee & Task Management</div>
           </div>
         </div>
@@ -110,14 +110,6 @@ export default function LoginPage() {
           Don't have an account?{' '}
           <Link to="/register">Register here</Link>
         </p>
-
-        {/* Demo credentials hint */}
-        <div className="auth-demo">
-          <span className="auth-demo-label">Demo accounts:</span>
-          <div className="auth-demo-list">
-            <span>Admin / Manager / Employee roles available</span>
-          </div>
-        </div>
       </div>
     </div>
   );

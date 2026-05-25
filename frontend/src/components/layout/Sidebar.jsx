@@ -29,11 +29,11 @@ export default function Sidebar() {
     <aside className={`sidebar ${collapsed ? 'sidebar--collapsed' : ''}`}>
       {/* Logo */}
       <div className="sidebar-logo">
-        <div className="logo-mark">W</div>
+        <div className="logo-mark">P</div>
         {!collapsed && (
           <div className="logo-text">
-            <span className="logo-name">WorkFlow</span>
-            <span className="logo-sub">Management</span>
+            <span className="logo-name">ProDesk</span>
+            <span className="logo-sub">Workspace</span>
           </div>
         )}
         <button

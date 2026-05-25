@@ -1,4 +1,5 @@
 const Task = require("../models/task.model");
+const Employee = require("../models/employee.model");
 
 exports.createTask = async (req, res) => {
     try {
@@ -19,7 +20,11 @@ exports.getTasks = async (req, res) => {
         let query = {};
 
         if (req.user.role === "employee") {
-            query.assignedTo = req.user.id;
+            const employee = await Employee.findOne({ user: req.user.id });
+            if (!employee) {
+                return res.status(200).json([]);
+            }
+            query.assignedTo = employee._id;
         }
 
         if (req.query.status) {
@@ -27,7 +32,10 @@ exports.getTasks = async (req, res) => {
         }
 
         const tasks = await Task.find(query)
-            .populate("assignedTo")
+            .populate({
+                path: "assignedTo",
+                populate: { path: "user", select: "name email role" }
+            })
             .populate("assignedBy", "name");
 
         res.status(200).json(tasks);

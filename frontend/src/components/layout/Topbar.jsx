@@ -15,7 +15,7 @@ const TITLES = {
 export default function Topbar() {
   const location = useLocation();
   const { user } = useAuth();
-  const info = TITLES[location.pathname] || { title: 'WorkFlow', sub: '' };
+  const info = TITLES[location.pathname] || { title: 'ProDesk', sub: '' };
 
   const now = new Date().toLocaleDateString('en-US', {
     weekday: 'long', month: 'long', day: 'numeric'

@@ -85,7 +85,7 @@ export default function ProfilePage() {
               }}
             >
               <span style={{ fontSize: 14, color: 'var(--text-muted)', fontWeight: 500 }}>{row.label}</span>
-              <span style={{ fontSize: 14, color: 'var(--text-primary)', fontFamily: row.label === 'User ID' ? 'monospace' : undefined, fontSize: row.label === 'User ID' ? 12 : 14 }}>
+              <span style={{ color: 'var(--text-primary)', fontFamily: row.label === 'User ID' ? 'monospace' : undefined, fontSize: row.label === 'User ID' ? 12 : 14 }}>
                 {row.value || '—'}
               </span>
             </div>

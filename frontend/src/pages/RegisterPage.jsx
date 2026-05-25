@@ -54,9 +54,9 @@ export default function RegisterPage() {
 
       <div className="auth-card fade-in" style={{ maxWidth: 460 }}>
         <div className="auth-logo">
-          <div className="auth-logo-mark">W</div>
+          <div className="auth-logo-mark">P</div>
           <div>
-            <div className="auth-logo-name">WorkFlow</div>
+            <div className="auth-logo-name">ProDesk</div>
             <div className="auth-logo-sub">Create your account</div>
           </div>
         </div>

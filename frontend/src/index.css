@@ -1,7 +1,7 @@
 /* =====================================================
-   WorkFlow — Employee & Task Management System
-   Design System: Refined Industrial Dark Theme
-   Fonts: Syne (display) + DM Sans (body)
+   ProDesk — Employee & Task Management System
+   Design System: Clean Light Workspace Theme
+   Fonts: Inter (display/body)
 ===================================================== */
 
 *, *::before, *::after {
@@ -12,35 +12,35 @@
 
 :root {
   /* Color Palette */
-  --bg-primary:    #0d0f14;
-  --bg-secondary:  #141720;
-  --bg-card:       #1a1e2a;
-  --bg-elevated:   #1f2434;
-  --bg-hover:      #252a3a;
+  --bg-primary:    #f5f7f9;
+  --bg-secondary:  #ffffff;
+  --bg-card:       #ffffff;
+  --bg-elevated:   #f8fafc;
+  --bg-hover:      #eef4fb;
 
-  --border:        #2a2f42;
-  --border-light:  #333a52;
+  --border:        #dfe3e8;
+  --border-light:  #e7ecf1;
 
-  --text-primary:  #f0f2f8;
-  --text-secondary:#8b92b0;
-  --text-muted:    #565d7a;
+  --text-primary:  #111827;
+  --text-secondary:#4b5563;
+  --text-muted:    #6b7280;
 
-  --accent:        #4f8ef7;
-  --accent-glow:   rgba(79,142,247,0.18);
-  --accent-hover:  #6ba3ff;
+  --accent:        #7c3aed;
+  --accent-glow:   rgba(124,58,237,0.18);
+  --accent-hover:  #5b21b6;
 
-  --green:         #3ecf8e;
-  --green-bg:      rgba(62,207,142,0.12);
-  --yellow:        #f5c518;
-  --yellow-bg:     rgba(245,197,24,0.12);
-  --red:           #ff5c5c;
-  --red-bg:        rgba(255,92,92,0.12);
-  --purple:        #a78bfa;
-  --purple-bg:     rgba(167,139,250,0.12);
+  --green:         #047857;
+  --green-bg:      rgba(4,120,87,0.12);
+  --yellow:        #ca8a04;
+  --yellow-bg:     rgba(202,138,4,0.12);
+  --red:           #b91c1c;
+  --red-bg:        rgba(185,28,28,0.12);
+  --purple:        #7c3aed;
+  --purple-bg:     rgba(124,58,237,0.12);
 
   /* Typography */
-  --font-display: 'Syne', sans-serif;
-  --font-body:    'DM Sans', sans-serif;
+  --font-display: 'Teko', 'Segoe UI', sans-serif;
+  --font-body:    'Teko', 'Segoe UI', sans-serif;
 
   /* Spacing */
   --radius-sm:   6px;
@@ -49,9 +49,9 @@
   --radius-xl:   24px;
 
   /* Shadows */
-  --shadow-sm:   0 2px 8px rgba(0,0,0,0.3);
-  --shadow-md:   0 4px 20px rgba(0,0,0,0.4);
-  --shadow-lg:   0 8px 40px rgba(0,0,0,0.5);
+  --shadow-sm:   0 2px 10px rgba(15,23,42,0.08);
+  --shadow-md:   0 6px 24px rgba(15,23,42,0.1);
+  --shadow-lg:   0 10px 40px rgba(15,23,42,0.12);
 
   /* Sidebar */
   --sidebar-width: 260px;
@@ -60,7 +60,7 @@
 html, body {
   height: 100%;
   font-family: var(--font-body);
-  background: var(--bg-primary);
+  background: linear-gradient(180deg, #f7f9fb 0%, #eef4fb 100%);
   color: var(--text-primary);
   font-size: 15px;
   line-height: 1.6;

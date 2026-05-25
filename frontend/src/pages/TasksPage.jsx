@@ -69,7 +69,8 @@ export default function TasksPage() {
     return (
       t.title?.toLowerCase().includes(q) ||
       t.description?.toLowerCase().includes(q) ||
-      t.assignedBy?.name?.toLowerCase().includes(q)
+      t.assignedBy?.name?.toLowerCase().includes(q) ||
+      t.assignedTo?.user?.name?.toLowerCase().includes(q)
     );
   });
 
@@ -225,6 +226,12 @@ function TaskCard({ task, canManage, onStatusChange, onDelete }) {
       )}
 
       <div className="task-card-meta">
+        {task.assignedTo?.user?.name && (
+          <div className="task-meta-row">
+            <span className="task-meta-label">Assigned to</span>
+            <span className="task-meta-val">{task.assignedTo.user.name}</span>
+          </div>
+        )}
         {task.assignedBy?.name && (
           <div className="task-meta-row">
             <span className="task-meta-label">Assigned by</span>
@@ -339,7 +346,7 @@ function TaskModal({ token, employees, onClose, onSaved, toast }) {
                 <option value="">Unassigned</option>
                 {employees.map(emp => (
                   <option key={emp._id} value={emp._id}>
-                    {emp.user?.name || emp._id}
+                    {emp.user?.name || emp.user?.email || emp._id}
                   </option>
                 ))}
               </select>

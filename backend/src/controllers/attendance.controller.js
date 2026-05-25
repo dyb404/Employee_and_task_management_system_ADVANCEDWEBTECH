@@ -1,10 +1,22 @@
 const Attendance = require("../models/attendance.model");
 
+const todayStart = () => {
+    const start = new Date();
+    start.setHours(0, 0, 0, 0);
+    return start;
+};
+
+const todayEnd = () => {
+    const end = new Date();
+    end.setHours(23, 59, 59, 999);
+    return end;
+};
+
 exports.checkIn = async (req, res) => {
     try {
         const existing = await Attendance.findOne({
             employee: req.user.id,
-            date: new Date().toDateString()
+            date: { $gte: todayStart(), $lte: todayEnd() }
         });
 
         if (existing) {
@@ -29,7 +41,7 @@ exports.checkOut = async (req, res) => {
     try {
         const record = await Attendance.findOne({
             employee: req.user.id,
-            date: new Date().toDateString()
+            date: { $gte: todayStart(), $lte: todayEnd() }
         });
 
         if (!record || !record.checkIn) {
