@@ -14,8 +14,7 @@ exports.createEmployee = async (req, res) => {
 exports.getAllEmployees = async (req, res) => {
     try {
         const employees = await Employee.find()
-            .populate("user", "name email role")
-            .populate("department", "name");
+            .populate("user", "name email role");
 
         res.status(200).json(employees);
     } 
@@ -27,8 +26,7 @@ exports.getAllEmployees = async (req, res) => {
 exports.getEmployeeById = async (req, res) => {
     try {
         const employee = await Employee.findById(req.params.id)
-            .populate("user") // will diplay sensitive data too {future change}
-            .populate("department");
+            .populate("user"); // will diplay sensitive data too {future change}
 
         if (!employee) {
             return res.status(404).json({ message: "Employee not found" });

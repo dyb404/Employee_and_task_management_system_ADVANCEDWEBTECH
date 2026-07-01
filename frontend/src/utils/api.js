@@ -44,6 +44,12 @@ export const taskAPI = {
   remove:   (id, token)     => apiFetch(`/tasks/${id}`, { method: 'DELETE' }, token),
 };
 
+// Users
+export const userAPI = {
+  getAll:   (token)         => apiFetch('/users', {}, token),
+  create:   (body, token)   => apiFetch('/users', { method: 'POST', body: JSON.stringify(body) }, token),
+};
+
 // Attendance
 export const attendanceAPI = {
   checkIn:  (token)         => apiFetch('/attendance/checkin', { method: 'POST' }, token),

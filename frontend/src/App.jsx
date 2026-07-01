@@ -5,7 +5,6 @@ import { ToastProvider } from './context/ToastContext';
 import { ProtectedRoute, AppLayout } from './components/layout/AppLayout';
 
 import LoginPage      from './pages/LoginPage';
-import RegisterPage   from './pages/RegisterPage';
 import DashboardPage  from './pages/DashboardPage';
 import EmployeesPage  from './pages/EmployeesPage';
 import TasksPage      from './pages/TasksPage';
@@ -21,7 +20,6 @@ export default function App() {
           <Routes>
             {/* Public Routes */}
             <Route path="/login"    element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
 
             {/* Protected Routes */}
             <Route path="/dashboard" element={

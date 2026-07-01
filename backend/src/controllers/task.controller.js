@@ -61,7 +61,7 @@ exports.updateStatus = async (req, res) => {
 
         task.status = req.body.status;
         await task.save();
-
+        //why not saved in db
         res.status(200).json({ message: "Updated", task });
 
     } 

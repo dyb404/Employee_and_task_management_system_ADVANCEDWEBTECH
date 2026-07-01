@@ -107,8 +107,7 @@ export default function LoginPage() {
         </form>
 
         <p className="auth-footer-text">
-          Don't have an account?{' '}
-          <Link to="/register">Register here</Link>
+          User accounts are created by an admin. Please contact your administrator if you need access.
         </p>
       </div>
     </div>

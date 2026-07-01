@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const employeeSchema = new mongoose.Schema({
     user: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
-    department: { type: mongoose.Schema.Types.ObjectId, ref: "Department" },
+    department: String,
     designation: String,
     phone: String,
     hireDate: Date,
